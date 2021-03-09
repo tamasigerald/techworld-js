@@ -1,0 +1,154 @@
+.f-contact {
+    @include flexCenter(column);
+    padding: 15% 5%;
+    width: 100%;
+    background-color: $gray1;
+    h4 {
+        font-weight: $w-bold;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: $black1;
+    }
+    .app {
+        @include flexCenter(column);
+        flex-wrap: wrap;
+        width: 100%;
+        p {
+            padding: 0.2rem 0;
+        }
+        .app-container {
+            @include flexCenter(column);
+            width: 90%;
+            align-items: center;
+            .app-btn {
+                @include flexCenter(row);
+                justify-content: flex-start;
+                width: 100%;
+                border: 1px solid $black1;
+                border-radius: $br;
+                padding: 1.5rem;
+                margin: 0.8rem 0;
+                &:hover {
+                    box-shadow: 0 0 10px $gold1;
+                }
+                .app-icon {
+                    @include flexCenter(row);
+                    font-size: 2.8rem;
+                    width: 10%;
+                }
+                .app-name {
+                    margin-left: 1rem;
+                }
+            }
+        }
+        .app-links {
+            @include flexCenter(column);
+            padding: 0.6rem 0;
+            a {
+                margin: 0.5rem 0;
+                
+                &:hover {
+                    color: $black2;
+                    text-shadow: 0 0 8px $gold1;
+                }
+               
+            }
+        }
+    }
+    .invitation {
+        @include flexCenter(column);
+        margin-top: 3.5rem;
+        width: 100%;
+        .social {
+            @include flexCenter(column);
+            padding: 1.2rem 0;
+            .social-container {
+                @include flexCenter(row);
+                width: 100%;
+                padding: 1.2rem 0;
+                font-size: 2rem;
+                a {
+                    padding: 0 1.4rem;
+                    &:hover {
+                        box-shadow: 0 0 10px $gold1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.f-nav {
+    text-align: center;
+    .card {
+        border-radius: 0;
+        margin: 0;
+        height: 10rem;
+        @include flexCenter(column);
+        color: $white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        position: relative;
+        .nav-icon {
+            @include flexCenter(row);
+            font-size: 1.4rem;
+            color: $gold1;
+            padding: 0.4rem 0;
+        }
+        .app-name {
+            padding: 0.4rem 0;
+            
+        }
+        &:hover {
+            background: $black1;
+            color: $gold1;
+        }
+        &:last-of-type {
+            background: $gold1;
+            color: $black1;
+            .nav-icon {
+                color: $black1;
+            }
+            &:after {    
+                background: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 5px;
+                left: 50%;
+                position: absolute;
+                background: $black1;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                width: 0;
+            }
+            &:hover:after { 
+                width: 100%; 
+                left: 0; 
+            }
+        }
+        &:after {    
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 5px;
+            left: 50%;
+            position: absolute;
+            background: $gold1;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+        &:hover:after { 
+            width: 100%; 
+            left: 0; 
+        }
+       
+    }
+    
+}
+

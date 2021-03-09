@@ -1,0 +1,152 @@
+@include bp-sSmall {
+    html {font-size: 13px;}
+}
+
+@include bp-small {
+    html {
+        font-size: 15px;
+    }
+}
+
+
+@include bp-medium {
+    .services, .projects, .testimony, .contact, .f-contact  {
+        padding: 15% 10%;
+    }
+
+    .container-hero {
+        padding: 0 10%;
+    }
+}
+
+
+@include bp-large {
+    .container-hero, .services, .projects, .testimony, .contact, .f-contact  {
+        padding: 10% 5%;
+    }
+    .services .container-card, .testimony .container-card {
+        @include flexCenter(row);
+        justify-content: space-between;
+        max-height: 40rem;
+    }
+    .services .card, .testimony .card {
+        width: 30%;
+        max-height: 40rem;
+    }
+    .contact .container {
+        padding: 0 15%;
+    }
+    .contact .section-content .statics {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        max-width: 50rem;
+        .statics-container {
+            border-width: 0 0 0 1px;
+            justify-content: flex-start;
+            width: 33%;
+            border-color: $black1;
+            border-style: solid;
+            padding: 0 3%;
+            &:first-of-type {
+                border: 0;
+            }
+        }
+    }
+    .f-contact, .f-nav {
+        @include flexCenter(row);
+    }
+    .f-nav .card {
+        width: 25%;
+    }
+
+    .f-contact .app, .f-contact .invitation {
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-height:  22rem;
+        margin: 0;
+        .app-links, .social {
+            flex-direction: row;
+            padding: 0;
+            .social-container {
+                font-size: 1.2rem;
+                width: auto;
+                
+            }
+        }
+        .app-links {
+            a {
+                padding-right: 0.6rem;
+            }
+        }
+        .form-container {
+            justify-content: flex-start;
+        }
+    }
+
+    .projects .container-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .card {
+            width: 30%;
+        }
+        .expo {
+            width: 68%;
+    
+        }
+    
+    }
+    .contact .form, .contact .section-t, .contact .section-p {
+        max-width: 41rem;
+    }
+    .container-hero {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero-img, .hero-content {
+        height: 95%;
+    }
+
+    .hero-content {
+        max-width: 45%;
+    }
+.secondary-header {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    .logo-container {
+        width: 20%;
+        height: 50%;
+    }
+    .menu {
+        width: 60%;
+        height: 100%;
+    }
+}
+.f-contact .app .app-container {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 90%;
+    .app-btn {
+    max-width: 48%;
+    align-self: flex-start;
+}
+}
+
+    html {
+        font-size: 16px;
+    }
+}
+
+@include bp-desktop {
+    .container-hero, .services, .projects, .testimony, .contact, .f-contact  {
+        padding: 8% 5%;
+    }
+    html {
+        font-size: 18px;
+    }
+}

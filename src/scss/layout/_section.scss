@@ -1,0 +1,70 @@
+main {
+    section {
+        padding: 15% 5%;
+        &:nth-child(odd) {
+            background-color: $gray1;
+        }
+        .container {
+            width: 100%;
+        }
+        .section-content {
+            margin-bottom: 2.5rem;
+            .section-t {
+                font-size: 2rem;
+                font-weight: $w-bold;
+            }
+            .section-p {
+                padding: 0.8rem 0;
+            }
+        }
+    }
+}
+
+.container, .container-hero {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+// CONTACT
+.contact {
+    .section-content {
+        @include flexCenter(column);
+        .section-t, .section-p {
+            text-align: center;
+        }
+        .bold {
+            font-weight: $w-bold;
+        }
+        .statics {
+            @include flexCenter(column);
+            margin-top: 1rem;
+        }
+        .statics-container {
+            @include flexCenter(row);
+            margin: 1rem 0;
+        }
+        .icon {
+            @include flexCenter(row);
+            font-size: 3rem;
+        }
+    }
+    
+}
+
+
+
+
+ // INDIVIDUAL ELEMENTS
+.point {
+    color: $gold1;
+}
+
+.card-img, .expo {
+    @include flexCenter(column);
+}
+
+.card-img img, .expo img, .card img {
+    object-fit: c;
+    width: 100%;
+}

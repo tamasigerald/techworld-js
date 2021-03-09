@@ -1,0 +1,70 @@
+// COLOR PALLLETE
+$gold1: #f4bd76;
+$gold2: #f6cd8f;
+$gray1: #e2e2e280;
+$gray2: #f7d9d990;
+$black1: #1a1b1f;
+$black2: #30353b;
+$white: white;
+$shadow: 0 8px 8px;
+$color_shadow: #00000033;
+$background: linear-gradient(180deg, $black2 0%, $black1 100%);
+$backgroundBtn: linear-gradient(180deg, #f7ce90 0%, #f4bd76 100%);
+
+
+
+// BREAKPOINTS
+$s-sscreen: 340px;
+$s-screen: 450px;
+$m-screen: 630px;
+$l-screen: 920px;
+$xl-screen: 1200px;
+@mixin bp-sSmall {
+    @media screen and (min-width: $s-sscreen) {
+        @content
+    }
+};
+@mixin bp-small {
+    @media screen and (min-width: $s-screen) {
+        @content
+    }
+};
+@mixin bp-medium {
+    @media screen and (min-width: $m-screen) {
+        @content
+    }
+};
+@mixin bp-large {
+    @media screen and (min-width: $l-screen) {
+        @content
+    }
+};
+@mixin bp-desktop {
+    @media screen and (min-width: $xl-screen) {
+        @content
+    }
+};
+
+
+// TYPO
+$w-ligh: 300;
+$w-norm: 400;
+$w-bold: 700;
+
+$br: 0.5rem; // border-radius
+
+
+
+
+// LAYOUT
+@mixin flexCenter ($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin square ($width, $height) {
+    width: $width;
+    height: $height;
+}
